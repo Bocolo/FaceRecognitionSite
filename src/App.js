@@ -5,12 +5,16 @@ import Navigation from './Components/Navigation/Navigation';
 import Logo from './Components/Logo/Logo';
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm';
 import Rank from './Components/Rank/Rank';
+import FaceRecognition from './Components/FaceRecognition/FaceRecognition';
+import Clarifai from 'clarifai';
 
 /*function App() {
   return (*/
 
 
-
+const app = new Clarifai.App({
+    apiKey: '0273b371fcb346b8a3b3af6240611605'
+});
 const particleOptions = {
     particles: {
         line_linked: {
@@ -35,14 +39,24 @@ class App extends Component {
         super();
         this.state= {
             input: '',
+            imageUrl:''
         }
     }
     onInputchange = (event) => {
-        console.log(event.target.value);
+        this.setState({input: event.target.value });
     }
     onButtonSubmit = () => {
-        console.log('click');
+        this.setState({imageUrl: this.state.input});
+        app.models.predict(Clarifai.FACE_DETECT_MODEL,
+            this.state.input).then(
+            function (response) {
+                console.log('check',response);
+            },
+            function (err) {
+            }
+        );
     }
+
     render() {
         return (
             <div className="App">
@@ -56,9 +70,7 @@ class App extends Component {
                 <ImageLinkForm onInputchange={this.onInputchange}
                     onButtonSubmit={this.onButtonSubmit} />
                
-                { /*  <Logo />
-                <ImageLinkForm />
-                <FaceRecognition/>*/}
+                <FaceRecognition imageUrl={this.state.imageUrl}/>
 
             </div>
         );
