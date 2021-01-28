@@ -5,9 +5,10 @@
     "\\src\\Components",
     "\\src\\Components\\FaceRecognition",
     "\\src\\Components\\Navigation",
+    "\\src\\Components\\Rank",
     "\\src\\Components\\Register",
     "\\src\\Components\\SignIn"
   ],
-  "SelectedNode": "\\src\\Components\\Register\\Register.js",
+  "SelectedNode": "\\src\\Components\\Rank\\Rank.js",
   "PreviewInSolutionExplorer": false
 }
