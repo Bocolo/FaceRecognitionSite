@@ -72,11 +72,7 @@ class App extends Component {
         })
     }
 
-  /*  componentDidMount() {
-        fetch('http://localhost:3001')
-            .then(response => response.json())
-        .then(console.log)
-    }*/
+ 
     calculateFaceLocation = (data) => {
         const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
         console.log(clarifaiFace);
@@ -173,52 +169,3 @@ export default App;
 
 
 
-/*   /*this.state.input after model-
-     * -https://samples.clarifai.com/face-det.jpg
-     *
-     *
-     *
-     * .then((response) => {
- console.log(response);
-})
-.catch((err) => {
- console.log(err);
-});
-};  */
-/*       .then(
-        function (response) {
-            console.log('check',response);
-        },
-            function (err) {
-               
-                console.log('error on button submit', err);
-               
-        }
-    );
-}
-"https://samples.clarifai.com/face-det.jpg"
-  console.log('check', response);
-                console.log(
-                    response.outputs[0].data.regions[0].region_info.bounding_box
-                );
-this.state.input
-'53e1df302c079b3db8a0a36033ed2d15
-Clarifai.FACE_DETECT_MODEL
-*/
- 
- 
-/*
-   onButtonSubmit = () => {
-       console.log('click');
-       this.setState({ imageUrl: this.state.input });
-       app.models.initModel({
-               id: Clarifai.FACE_DETECT_MODEL
-           })
-           .then((faceDetectModel) => {
-               return faceDetectModel.predict(this.state.input);
-           })
-           .then((response) => {
-               console.log(response.outputs[0].data.regions[0].region_info.bounding_box);
-           })
-           .catch(err => { console.log('ooops',err) })
-   }*/
