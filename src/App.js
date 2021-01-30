@@ -176,5 +176,9 @@ class App extends Component {
 export default App;
 
 
-
+/*
+ previous in pack.jsno start:
+  "start": "react-scripts start",
+ 
+ */
 
