@@ -4,11 +4,13 @@
     "\\src",
     "\\src\\Components",
     "\\src\\Components\\FaceRecognition",
+    "\\src\\Components\\ImageLinkForm",
     "\\src\\Components\\Navigation",
     "\\src\\Components\\Rank",
     "\\src\\Components\\Register",
-    "\\src\\Components\\SignIn"
+    "\\src\\Components\\SignIn",
+    "\\src\\Containers"
   ],
-  "SelectedNode": "\\src\\Components\\Rank\\Rank.js",
+  "SelectedNode": "\\src\\Components\\SignIn\\SignIn.js",
   "PreviewInSolutionExplorer": false
 }
